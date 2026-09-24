@@ -10,6 +10,7 @@ const PROJECTS = [
     tags: ["JavaScript", "PHP", "HTML5", "CSS", "Cypress"],
     image: `${BASE_PATH}/images/project-bomberman.png`,
     alt: "Screenshot of a browser-based Bomberman clone",
+    href: "https://github.com/TasnadiAttila/Bomberman",
   },
   {
     title: "JobTracker app",
@@ -18,6 +19,7 @@ const PROJECTS = [
     tags: ["TypeScript", "CSS", "JavaScript", "SQL"],
     image: `${BASE_PATH}/images/project-jobtracker.png`,
     alt: "Screenshot of the JobTracker sign-in screen",
+    href: "https://github.com/TasnadiAttila/jobtracker",
   },
   {
     title: "Landscape Metric Calculator",
@@ -26,6 +28,7 @@ const PROJECTS = [
     tags: ["Python"],
     image: `${BASE_PATH}/images/project-landscape.png`,
     alt: "Screenshot of the Landscape Metric Calculator QGIS plugin",
+    href: "https://github.com/TasnadiAttila/Lake-Tisza-landscape-calculator",
   },
 ];
 
@@ -56,7 +59,14 @@ export default function Projects() {
             </div>
             <div className="flex flex-col justify-center gap-4 p-10">
               <h3 className="font-display text-2xl font-semibold text-slate-100">
-                {project.title}
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-accent-soft focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-soft"
+                >
+                  {project.title}
+                </a>
               </h3>
               <p className="leading-relaxed text-muted">
                 {project.description}
