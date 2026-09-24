@@ -1,34 +1,35 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import { BASE_PATH } from "./basePath";
 
 export default function Hero() {
   return (
-    <section id="overview" className="mx-auto max-w-content px-6 pb-24 pt-20 sm:pt-28">
+    <section id="overview" className="mx-auto max-w-content px-6 py-24">
       <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <div className="mb-7 flex items-center gap-3 font-mono text-xs font-medium tracking-[0.18em] text-accent-soft">
+          <div className="mb-6 flex items-center gap-3 font-mono text-sm tracking-wide text-accent-soft">
             <span>TASNÁDI ATTILA</span>
-            <span className="h-px w-10 bg-accent-soft" />
+            <span className="h-px w-8 bg-accent-soft/60" />
           </div>
 
           <Reveal
             as="h1"
-            className="max-w-3xl font-display text-5xl font-semibold leading-[1.02] tracking-[-0.03em] sm:text-7xl"
+            className="font-display text-5xl font-semibold leading-[1.1] tracking-tight sm:text-6xl"
           >
             I write code that proves your product works.
           </Reveal>
 
-          <p className="mt-8 max-w-[52ch] text-lg leading-relaxed text-muted sm:text-xl">
+          <p className="mt-8 max-w-[52ch] text-lg leading-relaxed text-muted">
             Specializing in highly scalable end-to-end testing frameworks,
             parallel execution pipelines, and automated quality gates that
             guarantee flawless shipping.
           </p>
 
-          <p className="mt-5 border-l-2 border-accent-soft pl-4 text-base font-medium text-heading">
+          <p className="mt-4 text-lg text-heading">
             Test Automation Engineer at PTC Hungary Kft.
           </p>
 
-          <div className="mt-12 max-w-2xl overflow-hidden rounded-xl border border-white/15 bg-ink font-mono text-xs shadow-[10px_10px_0_#5eead4] sm:text-sm">
+          <div className="mt-12 overflow-hidden rounded-xl bg-ink font-mono text-sm shadow-lg">
             <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
               <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
               <span className="h-2.5 w-2.5 rounded-full bg-yellow-500" />
@@ -52,9 +53,9 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative aspect-[425/490] w-full overflow-hidden rounded-[2rem] border-8 border-paper shadow-[12px_12px_0_#5eead4] lg:mt-2">
+        <div className="relative aspect-[425/490] w-full overflow-hidden rounded-2xl lg:mt-2">
           <Image
-            src="/images/hero-photo.png"
+            src={`${BASE_PATH}/images/hero-photo.png`}
             alt="Portrait of Attila Tasnádi"
             fill
             priority
